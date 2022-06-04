@@ -1,0 +1,73 @@
+html {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(217, 54%, 11%);
+}
+
+.card {
+    width: 20rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: hsl(216, 50%, 16%);
+}
+
+.card-image img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.card-text p {
+    color: hsl(215, 51%, 70%);
+}
+
+.card-title {
+    color: hsl(0, 0%, 100%);
+}
+
+.card-price-and-time {
+    display: flex;
+    align-items: center;
+}
+
+.card-eth-value {
+    display: flex;
+    align-items: center;
+}
+
+.card-eth-value img {
+    width: 0.8rem;
+    height: 1.4rem;
+    padding-right: 0.5rem;
+}
+
+.card-eth-value p {
+    color: hsl(178, 100%, 50%);
+}
+
+.order-time-left {
+    display: flex;
+}
+
+.card-author {
+    display: flex;
+    align-items: center;
+}
+
+.card-author img {
+    height: 2rem;
+    width: auto;
+    margin-right: 1rem;
+    border: 1.5px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+
+.card-author span {
+    color: hsl(0, 0%, 100%);
+}
