@@ -4,23 +4,55 @@ html {
 }
 
 body {
-    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
     background-color: hsl(217, 54%, 11%);
 }
+
+
+/* Card styles */
 
 .card {
     width: 20rem;
     padding: 2rem;
     border-radius: 1rem;
     background-color: hsl(216, 50%, 16%);
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.image-section {
+    position: relative;
+    width: 100%;
 }
 
 .card-image img {
     width: 100%;
     border-radius: 1rem;
+}
+
+.card-image-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    border-radius: 1rem;
+    background-color: hsl(178, 100%, 50%, 0.8);
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.card-image-overlay img {
+    height: 5rem;
+    width: 5rem;
 }
 
 .card-text p {
@@ -29,11 +61,16 @@ body {
 
 .card-title {
     color: hsl(0, 0%, 100%);
+    transition: color 0.3s;
 }
+
+
+/* Value and time stlyes */
 
 .card-price-and-time {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .card-eth-value {
@@ -43,7 +80,7 @@ body {
 
 .card-eth-value img {
     width: 0.8rem;
-    height: 1.4rem;
+    height: 1.rem;
     padding-right: 0.5rem;
 }
 
@@ -53,7 +90,17 @@ body {
 
 .order-time-left {
     display: flex;
+    align-items: center;
 }
+
+.order-time-left img {
+    width: 1.1rem;
+    height: 1.1rem;
+    padding-right: 0.5rem;
+}
+
+
+/* Author styles */
 
 .card-author {
     display: flex;
@@ -70,4 +117,36 @@ body {
 
 .card-author span {
     color: hsl(0, 0%, 100%);
+    transition: color 0.3s;
+}
+
+.attribution {
+    position: fixed;
+    left: 0;
+    bottom: 1%;
+    width: 100%;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+
+.attribution a {
+    color: hsl(178, 100%, 50%, 0.8)
+}
+
+
+/* Hover styles */
+
+.image-section,
+.card-title,
+.card-author span {
+    cursor: pointer;
+}
+
+.card-image-overlay:hover {
+    opacity: 0.9;
+}
+
+.card-title:hover,
+.card-author span:hover {
+    color: hsl(178, 100%, 50%);
 }
